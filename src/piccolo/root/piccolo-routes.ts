@@ -3,6 +3,6 @@ import { PiccoloRootComponentComponent } from "./piccolo-root-component/piccolo-
 
 export const PICCOLO_ROUTES: Route[] = [
     {
-        path: '', component: PiccoloRootComponentComponent
+        path: '', title: 'Piccolo', component: PiccoloRootComponentComponent
     }
 ]

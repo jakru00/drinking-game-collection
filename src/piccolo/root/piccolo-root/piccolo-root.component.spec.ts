@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PiccoloRootComponentComponent } from './piccolo-root-component.component';
+import { PiccoloRootComponentComponent } from './piccolo-root.component';
 
 describe('PiccoloRootComponentComponent', () => {
   let component: PiccoloRootComponentComponent;

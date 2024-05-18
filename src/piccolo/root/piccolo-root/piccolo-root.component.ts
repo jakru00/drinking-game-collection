@@ -6,7 +6,7 @@ import { StartPageComponent } from '../../features/start-page/components/start-p
   selector: 'app-piccolo-root-component',
   standalone: true,
   imports: [StartPageComponent],
-  templateUrl: './piccolo-root-component.component.html',
+  templateUrl: './piccolo-root.component.html',
 })
 export class PiccoloRootComponentComponent {
 

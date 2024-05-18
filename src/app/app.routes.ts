@@ -1,12 +1,17 @@
 import { Routes } from '@angular/router';
 
+const defaultRoute = 'piccolo';
+
 export const routes: Routes = [
     {
-        path: '',
-        title: 'Piccolo',
+        path: defaultRoute,
+        title: defaultRoute,
         loadChildren: () => 
           import('../piccolo/root/piccolo-routes')
           .then((piccoloGame) => piccoloGame.PICCOLO_ROUTES)
     },
-    { path: '**', redirectTo: '', },
+    {
+        path: '', pathMatch: 'full', redirectTo: defaultRoute
+    },
+    { path: '**', redirectTo: defaultRoute, },
 ];

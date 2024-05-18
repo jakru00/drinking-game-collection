@@ -4,18 +4,45 @@
     background-color: rgb(3, 152, 252);
     display: flex;
     flex-direction: column;
-}
+    color: white;
 
-.header-container {
-    height: 4rem;
-}
+    .header-container {
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
 
-.logo-container {
-    height: 12rem;
-}
+        .back-arrow{
+            transform: scale(1.2);
+        }
+    }
+    
+    .logo-container {
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .logo {
+            flex-shrink: 1;
+            font-size: 5rem;
+        }
+    }
+    
+    .menu-container {
+        flex-grow: 1;
 
-.menu-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+        .button-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .button {
+                width: 50%;
+                height: 3rem;
+            }
+        }
+    }
 }

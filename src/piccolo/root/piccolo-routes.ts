@@ -5,12 +5,12 @@ import { PlayerComponent } from "../features/players/components/player/player.co
 
 export const PICCOLO_ROUTES: Route[] = [
     {
-        path: '', title: 'Piccolo', component: PiccoloRootComponent,
+        path: '', pathMatch: 'full', redirectTo: 'home',
     },
     {
         path: 'home', title: 'Piccolo', component: StartPageComponent,
     },
     {
         path: 'players', title: 'Piccolo', component: PlayerComponent,
-    }
+    },
 ]

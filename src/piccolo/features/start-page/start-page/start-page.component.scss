@@ -1,0 +1,21 @@
+.start-page-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3, 152, 252);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    height: 4rem;
+}
+
+.logo-container {
+    height: 12rem;
+}
+
+.menu-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

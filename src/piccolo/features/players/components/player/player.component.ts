@@ -26,6 +26,6 @@ export class PlayerComponent {
   }
 
   removePlayer(index: number): void {
-    this.players.splice(index);
+    this.players = this.players.filter((_, currentIndex) => currentIndex !== index);
   }
 }

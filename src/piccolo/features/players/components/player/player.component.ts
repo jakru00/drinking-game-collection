@@ -18,9 +18,11 @@ export class PlayerComponent {
   players: string[] = [];
 
   addPlayer(input: HTMLInputElement): void {
-    this.players.push(input.value);
-    input.value = '';
-    input.blur();
+    if(input.value !== '') {
+      this.players.push(input.value);
+      input.value = '';
+      input.blur();
+    }
   }
 
   removePlayer(index: number): void {

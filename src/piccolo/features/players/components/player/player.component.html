@@ -1,38 +1,32 @@
 <div class="player-page-container">
     <div class="header-container">
-        <mat-icon 
-            class="back-arrow"
-            routerLink="home"
-        >
+        <mat-icon class="back-arrow" routerLink="home">
             arrow_back
         </mat-icon>
     </div>
-    <div class="players-container">
+
+    <div class="players">
         <div class="players-title">Spieler</div>
-        @for (player of players; track $index) {    
-            <div class="player">
-                <p>{{ player }}</p>
-                <button 
-                    mat-mini-fab 
-                    color="white"
-                    (click)="removePlayer($index)"
-                >
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </div>
+        @for (player of players; track $index) {
+        <div class="player content-and-button">
+            <span>{{ player }}</span>
+            <button mat-mini-fab color="white" (click)="removePlayer($index)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
         }
-        <div class="player">
-            <input
-                #playerInput
-                type="text"
-                placeholder="Spieler hinzufügen"
-            >
-            <button 
-                mat-mini-fab 
-                color="white"
-                (click)="addPlayer(playerInput)"
-            >
-                <mat-icon>arrow_upward</mat-icon>
+    </div>
+
+    <div class="footer-container">
+        <div class="content-and-button">
+            <input #playerInput type="text" placeholder="Spieler hinzufügen">
+            <button mat-mini-fab color="white" (click)="addPlayer(playerInput)">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+        <div class="button-container">
+            <button mat-flat-button class="button" [routerLink]="['../']">
+                Spiel starten
             </button>
         </div>
     </div>

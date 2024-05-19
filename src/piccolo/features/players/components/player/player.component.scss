@@ -1,30 +1,37 @@
+.content-and-button {
+    flex-shrink: 1;
+    width: 80%;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 4fr 1fr;
+}
+
 .player-page-container {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     background-color: rgb(3, 152, 252);
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: white;
 
     .header-container {
-        width: 100%;
         display: flex;
-        
-        .back-arrow{
+
+        .back-arrow {
             padding: 0.8rem;
             transform: scale(1.2);
         }
     }
 
-    .players-container {
-        width: 80%;
+    .players {
+        flex-grow: 1;
+        width: 100%;
         height: 100%;
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        padding-bottom: 1rem;
 
         .players-title {
             font-size: x-large;
@@ -32,10 +39,28 @@
         }
 
         .player {
+            align-items: center;
+        }
+    }
+
+    .footer-container {
+        width: 100%;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .button-container {
             width: 100%;
-            display: grid;
-            gap: 0.5rem;
-            grid-template-columns: 4fr 1fr;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .button {
+                width: 50%;
+                height: 3rem;
+            }
         }
     }
 }

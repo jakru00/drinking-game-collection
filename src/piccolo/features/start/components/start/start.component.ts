@@ -7,10 +7,10 @@ import { RouterModule } from '@angular/router';
   selector: 'app-start-page',
   standalone: true,
   imports: [RouterModule, MatIconModule, MatButtonModule],
-  templateUrl: './start-page.component.html',
-  styleUrl: './start-page.component.scss',
+  templateUrl: './start.component.html',
+  styleUrl: './start.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StartPageComponent {
+export class StartComponent {
 
 }

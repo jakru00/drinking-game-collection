@@ -4,7 +4,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'piccolo-start-page',
+  selector: 'app-start-page',
   standalone: true,
   imports: [RouterModule, MatIconModule, MatButtonModule],
   templateUrl: './start-page.component.html',

@@ -14,5 +14,15 @@ import { RouterModule } from '@angular/router';
   styleUrl: './player.component.scss'
 })
 export class PlayerComponent {
+  players: string[] = [];
 
+  addPlayer(input: HTMLInputElement): void {
+    this.players.push(input.value);
+    input.value = '';
+    input.blur();
+  }
+
+  removePlayer(index: number): void {
+    this.players.splice(index);
+  }
 }

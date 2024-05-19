@@ -9,19 +9,30 @@
     </div>
     <div class="players-container">
         <div class="players-title">Spieler</div>
+        @for (player of players; track $index) {    
+            <div class="player">
+                <p>{{ player }}</p>
+                <button 
+                    mat-mini-fab 
+                    color="white"
+                    (click)="removePlayer($index)"
+                >
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        }
         <div class="player">
-            <p>Spielername</p>
-            <button mat-mini-fab color="white">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </div>
-        <div class="player">
-            <input 
+            <input
+                #playerInput
                 type="text"
                 placeholder="Spieler hinzufügen"
             >
-            <button mat-mini-fab color="white">
-                <mat-icon>arrow_up</mat-icon>
+            <button 
+                mat-mini-fab 
+                color="white"
+                (click)="addPlayer(playerInput)"
+            >
+                <mat-icon>arrow_upward</mat-icon>
             </button>
         </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from "@angular/material/button";
 import { RouterModule } from '@angular/router';
@@ -8,7 +8,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule, MatIconModule, MatButtonModule],
   templateUrl: './start-page.component.html',
-  styleUrl: './start-page.component.scss'
+  styleUrl: './start-page.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StartPageComponent {
 

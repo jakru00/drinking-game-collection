@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { StartPageComponent } from '../../features/start-page/components/start-page/start-page.component';
 
 
@@ -7,6 +7,7 @@ import { StartPageComponent } from '../../features/start-page/components/start-p
   standalone: true,
   imports: [StartPageComponent],
   templateUrl: './piccolo-root.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PiccoloRootComponentComponent {
 

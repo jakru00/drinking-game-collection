@@ -8,12 +8,12 @@ export const PICCOLO_ROUTES: Route[] = [
         path: '', pathMatch: 'full', redirectTo: 'home',
     },
     {
-        path: 'home', title: 'Piccolo', component: StartComponent,
+        path: 'home', component: StartComponent,
     },
     {
-        path: 'players', title: 'Piccolo', component: PlayerComponent,
+        path: 'players', component: PlayerComponent,
     },
     {
-        path: 'game', title: 'Piccolo', component: TaskComponent,
+        path: 'game', component: TaskComponent,
     },
 ]

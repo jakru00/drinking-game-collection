@@ -34,6 +34,10 @@ export class PlayerComponent {
     this.players = this.players.filter((_, currentIndex) => currentIndex !== index);
   }
 
+  clearPlayers(): void {
+    this.players = [];
+  }
+
   submitPlayers(): void {
     this.userService.registerPlayers(this.players);
   }

@@ -1,7 +1,7 @@
 import { Route } from "@angular/router";
-import { PlayerComponent } from "../features/players/components/player/player.component";
-import { StartComponent } from "../features/start/components/start/start.component";
-import { TaskComponent } from "../features/tasks/components/task/task.component";
+import { StartComponent } from "./components/start/start.component";
+import { PlayerComponent } from "./components/player/player.component";
+import { TaskComponent } from "./components/task/task.component";
 
 export const PICCOLO_ROUTES: Route[] = [
     {

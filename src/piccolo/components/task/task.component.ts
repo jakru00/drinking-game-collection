@@ -40,8 +40,9 @@ export class TaskComponent {
   }
 
   getPreviousTask(): void {
-    this.isFirstTask = this.taskService.isFirstTask();
     this.task = this.taskService.getPreviousTask();
+    this.isFirstTask = this.taskService.isFirstTask();
+    this.isLastTask = this.taskService.isLastTask();
   }
 
   resetGame(): void {

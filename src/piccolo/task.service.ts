@@ -16,7 +16,7 @@ export class TaskService {
 
   getFirstTask(): Task {
     this.moveNextTask();
-console.log(DUMMY_TASKS)
+
     return this.taskHistory[this.index];
   }
 

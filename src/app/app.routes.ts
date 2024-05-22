@@ -7,7 +7,7 @@ export const routes: Routes = [
         path: defaultRoute,
         title: defaultRoute,
         loadChildren: () => 
-          import('../piccolo/root/piccolo-routes')
+          import('../piccolo/piccolo-routes')
           .then((piccoloGame) => piccoloGame.PICCOLO_ROUTES)
     },
     {

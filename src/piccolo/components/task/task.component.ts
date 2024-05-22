@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from "@angular/material/dialog";
 import { MatIconModule } from '@angular/material/icon';
-import { TaskService } from '../../task.service';
-import { Task } from '../../storage/task.type';
 import { Router } from '@angular/router';
+import { Task } from '../../storage/task.type';
+import { TaskService } from '../../task.service';
+import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
 
 @Component({
   selector: 'app-task',
@@ -22,6 +24,7 @@ export class TaskComponent {
   constructor(
     readonly router: Router,
     readonly taskService: TaskService,
+    public dialog: MatDialog
   ) {
     this.task = taskService.getFirstTask();
   }
@@ -43,5 +46,11 @@ export class TaskComponent {
 
   resetGame(): void {
     this.router.navigateByUrl('');
+  }
+
+  openDialog(): void {
+    this.dialog.open(TaskDialogComponent, {
+      height: '95px',
+    });
   }
 }

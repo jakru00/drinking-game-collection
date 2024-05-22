@@ -26,7 +26,7 @@
         </div>
         <div class="button-container">
             <button mat-flat-button class="button" disabled="{{ players.length === 0 }}" (click)="clearPlayers()">
-                Alle Spieler löschen
+                Alle löschen
             </button>
             <button mat-flat-button class="button" [routerLink]="['../game']" disabled="{{ players.length <= 1 }}" (click)="submitPlayers()">
                 Spiel starten

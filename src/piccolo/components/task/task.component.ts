@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { PiccoloService } from '../../piccolo.service';
+import { TaskService } from '../../task.service';
 import { Task } from '../../storage/task.type';
 import { Router } from '@angular/router';
 
@@ -21,7 +21,7 @@ export class TaskComponent {
 
   constructor(
     readonly router: Router,
-    readonly service: PiccoloService,
+    readonly service: TaskService,
   ) {
     this.task = service.getFirstTask();
   }

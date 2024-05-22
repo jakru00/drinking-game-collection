@@ -7,7 +7,7 @@ const TASK_AMOUNT_PER_GAME = 10;
 @Injectable({
   providedIn: 'root'
 })
-export class PiccoloService {
+export class TaskService {
   dummyTasks: Task[] = [...DUMMY_TASKS];
 
   taskHistory: Task[] = [];

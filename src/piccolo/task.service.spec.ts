@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PiccoloService } from './piccolo.service';
+import { TaskService } from './task.service';
 
 describe('PiccoloService', () => {
-  let service: PiccoloService;
+  let service: TaskService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PiccoloService);
+    service = TestBed.inject(TaskService);
   });
 
   it('should be created', () => {

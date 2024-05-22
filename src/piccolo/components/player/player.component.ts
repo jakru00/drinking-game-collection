@@ -23,7 +23,7 @@ export class PlayerComponent {
     if(input.value !== '') {
       this.players.push(input.value);
       input.value = '';
-      input.blur();
+      input.focus();
     }
   }
 

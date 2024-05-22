@@ -21,9 +21,9 @@ export class TaskComponent {
 
   constructor(
     readonly router: Router,
-    readonly service: TaskService,
+    readonly taskService: TaskService,
   ) {
-    this.task = service.getFirstTask();
+    this.task = taskService.getFirstTask();
   }
 
   getNextTask(): void {
@@ -31,14 +31,14 @@ export class TaskComponent {
       this.resetGame();
     }
 
-    this.task = this.service.getNextTask();
-    this.isFirstTask = this.service.isFirstTask();
-    this.isLastTask = this.service.isLastTask();
+    this.task = this.taskService.getNextTask();
+    this.isFirstTask = this.taskService.isFirstTask();
+    this.isLastTask = this.taskService.isLastTask();
   }
 
   getPreviousTask(): void {
-    this.isFirstTask = this.service.isFirstTask();
-    this.task = this.service.getPreviousTask();
+    this.isFirstTask = this.taskService.isFirstTask();
+    this.task = this.taskService.getPreviousTask();
   }
 
   resetGame(): void {

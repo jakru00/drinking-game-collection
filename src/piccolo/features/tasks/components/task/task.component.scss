@@ -31,14 +31,19 @@
     }
 
     .button-container {
-        width: 50%;
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 1rem;
-
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        
         .button {
-            height: 2rem;
+            height: 3rem;
             background-color: rgb(255, 234, 0);
+        }
+        
+        .fab-button {
+            color: black;
+            width: 3rem;
         }
     }
 }
